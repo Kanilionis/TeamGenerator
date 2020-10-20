@@ -18,7 +18,7 @@ getPosition()
 function getPosition(){
   inquirer.prompt({
     type: "list",
-    message: "What is your position?",
+    message: "POSITION:",
     name: "position",
     choices: [
       "Engineer",
@@ -35,9 +35,9 @@ function getPosition(){
       break;
       case "Manager": managerQuestions();
       break;
-      default: createTeamMemberCard()
+      default: createTeamMemberCard();
     }  
-  })
+  });
   }
 
 
@@ -71,7 +71,7 @@ function managerQuestions(){
       response.office
     );
     employees.push(manager)
-    renderManager()
+    getPosition()
     
   })
 
@@ -105,8 +105,8 @@ function internQuestions(){
       response.email,
       response.school
     );
-    renderIntern()
     employees.push(intern)
+    getPosition()
   })
 }
 
@@ -139,10 +139,14 @@ function engineerQuestions(){
       response.email,
       response.github
     );
-    renderEngineer()
     employees.push(engineer)
+    getPosition()
   })
 }
+  function createTeamMemberCard(){
+    // fs.mkdirSync(OUTPUT_DIR);
+    fs.writeFileSync(outputPath, render(employees, "utf8"))
+  }
 
 
 

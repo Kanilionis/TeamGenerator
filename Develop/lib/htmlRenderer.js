@@ -63,4 +63,5 @@ const replacePlaceholders = (template, placeholder, value) => {
   return template.replace(pattern, value);
 };
 
-module.exports = render;
+
+module.exports = render
