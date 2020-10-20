@@ -1,16 +1,16 @@
 // TODO: Write code to define and export the Employee class
 
 class Employee{
-  constructor(name, idNumber, email){
+  constructor(name, id, email){
     this.name = name;
-    this.idNumber = idNumber;
+    this.id = id;
     this.email = email
   }
 getName(){
   return this.name
 }
 getId(){
-  return this.idNumber
+  return this.id
 }
 getEmail(){
   return this.email

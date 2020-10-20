@@ -1,0 +1,23 @@
+.team-heading{
+  font-family: 'DM Sans', sans-serif;
+  color: black;
+  background-color: hotpink;
+}
+
+.card-header{
+  font-family: 'DM Sans', sans-serif;
+  color: black;
+  background-color: lightcyan;
+}
+
+.card-body{
+  font-family: 'DM Sans', sans-serif;
+  color: black;
+  background-color: lightgoldenrodyellow;
+}
+
+.card{
+  outline: dotted 3px black;
+  padding: 2px;
+  margin: 8px
+}

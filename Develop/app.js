@@ -1,4 +1,3 @@
-// const Employee = require("./lib/Employee")
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
@@ -50,8 +49,8 @@ function managerQuestions(){
     },
     {
       type: "input",
-      message: "ID NUMBER:?",
-      name: "idNumber"
+      message: "ID NUMBER:",
+      name: "id"
     },
     {
       type: "input",
@@ -60,15 +59,15 @@ function managerQuestions(){
     },
     {
       type: "input",
-      message: "OFFICE NUMBER",
-      name: "office"
+      message: "OFFICE NUMBER:",
+      name: "officeNumber"
     }
   ]).then((response) => {
     var manager = new Manager(
       response.name,
-      response.idNumber,
+      response.id,
       response.email,
-      response.office
+      response.officeNumber
     );
     employees.push(manager)
     getPosition()
@@ -86,7 +85,7 @@ function internQuestions(){
     {
       type: "input",
       message: "ID NUMBER:",
-      name: "idNumber"
+      name: "id"
     },
     {
       type: "input",
@@ -101,7 +100,7 @@ function internQuestions(){
   ]).then((response) => {
     var intern = new Intern(
       response.name,
-      response.idNumber,
+      response.id,
       response.email,
       response.school
     );
@@ -119,8 +118,8 @@ function engineerQuestions(){
     },
     {
       type: "input",
-      message: "ID NUMBER",
-      name: "idNumber"
+      message: "ID NUMBER:",
+      name: "id"
     },
     {
       type: "input",
@@ -135,7 +134,7 @@ function engineerQuestions(){
   ]).then((response) => {
     var engineer = new Engineer(
       response.name,
-      response.idNumber,
+      response.id,
       response.email,
       response.github
     );
